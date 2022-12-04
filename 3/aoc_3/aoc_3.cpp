@@ -11,7 +11,6 @@ int three_one()
     const string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     while(getline(file, te))
     {
-        // cout << "Text: " + te + "\n";
         string comp1 = te.substr(0, (te.length() / 2));
         string comp2 = te.replace(0, comp1.length(), "");
 
@@ -38,9 +37,6 @@ int three_one()
                 }
             }
         }
-        
-        // cout << "comp1: " + comp1 + "\n";
-        // cout << "comp2: " + comp2 + "\n";
     }
     return prioritySum;
 }
@@ -55,11 +51,7 @@ int three_two()
     string backpacks[3];
     while(getline(file, te))
     {
-        
-        
         backpacks[index] = te;
-        
-
         if(index == 2)
         {
             string alphabetTemp = alphabet;
@@ -79,13 +71,6 @@ int three_two()
                                 {
                                     if(alphabetTemp[a] == backpacks[2][z])
                                     {
-                                        cout << "character:";
-                                        cout << backpacks[0][i];
-                                        cout << "\n";
-                                        cout << "Text1: " + backpacks[0] + "\n";
-                                        cout << "Text2: " + backpacks[1] + "\n";
-                                        cout << "Text3: " + backpacks[2] + "\n";
-                                        cout << "alphabetTemp: " + alphabetTemp + "\n";
                                         alphabetIndex = a;
                                         prioritySum += a + 1;
                                     }
